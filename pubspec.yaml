@@ -1,6 +1,6 @@
 name: sweet_cookie_jar
 description: A most easily usable cookie management library in Dart. With SweetCookieJar, you can easily manage cookie on your application.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/myConsciousness/sweet-cookie-jar
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   collection: ^1.15.0
   http: ^0.13.4
+  universal_io: ^2.0.4
 
 dev_dependencies:
   flutter_lints: ^1.0.0
