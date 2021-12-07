@@ -1,6 +1,6 @@
 **_A most easily usable cookie management library in Dart!_**
 
-[![pub package](https://img.shields.io/pub/v/sweet_cookie_jar.svg)](https://pub.dev/packages/sweet_cookie_jar)
+[![pub package](https://img.shields.io/pub/v/sweet-cookie-jar.svg)](https://pub.dev/packages/sweet-cookie-jar)
 [![Dart](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/dart.yml/badge.svg)](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/dart.yml)
 
 <!-- TOC -->
@@ -60,7 +60,6 @@ BSD-style license that can be found in the LICENSE file.
 `SweetCookieJar` was designed and implemented by **_Kato Shinya_**.
 
 - [Creator Profile](https://github.com/myConsciousness)
-- [License](https://github.com/myConsciousness/sweet_cookie_jar/blob/main/LICENSE)
-- [API Document](https://pub.dev/documentation/sweet_cookie_jar/latest/sweet_cookie_jar/sweet_cookie_jar-library.html)
-- [Release Note](https://github.com/myConsciousness/sweet_cookie_jar/releases)
-- [Bug Report](https://github.com/myConsciousness/sweet_cookie_jar/issues)
+- [License](https://github.com/myConsciousness/sweet-cookie-jar/blob/main/LICENSE)
+- [Release Note](https://github.com/myConsciousness/sweet-cookie-jar/releases)
+- [Bug Report](https://github.com/myConsciousness/sweet-cookie-jar/issues)
