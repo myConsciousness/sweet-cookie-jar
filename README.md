@@ -1,3 +1,5 @@
+![sweet_cookie_jar](https://user-images.githubusercontent.com/13072231/145067729-a8ac198a-e157-484a-8834-c74ca3470616.png)
+
 **_A most easily usable cookie management library in Dart!_**
 
 [![pub package](https://img.shields.io/pub/v/sweet-cookie-jar.svg)](https://pub.dev/packages/sweet-cookie-jar)
