@@ -2,10 +2,13 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Package imports:
 import 'package:http/http.dart';
-import 'package:sweet_cookie_jar/sweet_cookie_jar.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
+
+// Project imports:
+import 'package:sweet_cookie_jar/sweet_cookie_jar.dart';
 
 final _testResponse = Response.bytes(
   [],
