@@ -6,13 +6,12 @@
 <!-- TOC -->
 
 - [1. About](#1-about)
-  - [1.2. Introduction](#12-introduction)
-    - [1.2.1. Install Library](#121-install-library)
-    - [1.2.2. Import It](#122-import-it)
-    - [1.2.3. Use SweetCookieJar](#123-use-sweetcookiejar)
-  - [1.3. Using](#13-using)
-  - [1.4. License](#14-license)
-  - [1.5. More Information](#15-more-information)
+  - [1.1. Introduction](#11-introduction)
+    - [1.1.1. Install Library](#111-install-library)
+    - [1.1.2. Import It](#112-import-it)
+    - [1.1.3. Use SweetCookieJar](#113-use-sweetcookiejar)
+  - [1.2. License](#12-license)
+  - [1.3. More Information](#13-more-information)
 
 <!-- /TOC -->
 
@@ -21,9 +20,13 @@
 `SweetCookieJar` is an open-sourced Dart library.</br>
 With `SweetCookieJar`, you can easily manage cookie on your application.
 
-## 1.2. Introduction
+`SweetCookieJar` is a library that extends the functionality of the official [Cookie](https://api.flutter.dev/flutter/dart-io/Cookie-class.html) class. It also works with [Responses](https://pub.dev/documentation/http/latest/http/Response-class.html) in the HTTP package, and even if multiple `set-cookie` are set in the response header, which is a weak point in the HTTP package, `SweetCookieJar` can manage these cookie information very easily.
 
-### 1.2.1. Install Library
+No more difficult implementation is needed to handle multiple `set-cookie` set in response header in Dart. Just pass the [Responses](https://pub.dev/documentation/http/latest/http/Response-class.html) to the constructor of `SweetCookieJar`!
+
+## 1.1. Introduction
+
+### 1.1.1. Install Library
 
 **_With Dart:_**
 
@@ -37,17 +40,42 @@ With `SweetCookieJar`, you can easily manage cookie on your application.
  flutter pub add sweet_cookie_jar
 ```
 
-### 1.2.2. Import It
+### 1.1.2. Import It
 
 ```dart
 import 'package:sweet_cookie_jar/sweet_cookie_jar.dart';
 ```
 
-### 1.2.3. Use SweetCookieJar
+### 1.1.3. Use SweetCookieJar
 
-## 1.3. Using
+```dart
+void main() {
+    // The cookie set in the response header
+    // will be extracted by the constructor process.
+    final cookieJar = SweetCookieJar.from(response: response);
 
-## 1.4. License
+    if (cookieJar.isEmpty) {
+        // It means that there is no cookie information
+        // in the response header.
+        return;
+    }
+
+    // You can find cookie by name easily.
+    final cookie = cookieJar.find(name: 'AWSALB');
+    print(cookie.name);
+    print(cookie.value);
+
+    // Also you can get cookie as JSON format.
+    print(cookie.json);
+
+    if (cookie.isExpired) {
+        // Do something when cookie is expired.
+        return;
+    }
+}
+```
+
+## 1.2. License
 
 ```license
 Copyright (c) 2021, Kato Shinya. All rights reserved.
@@ -55,7 +83,7 @@ Use of this source code is governed by a
 BSD-style license that can be found in the LICENSE file.
 ```
 
-## 1.5. More Information
+## 1.3. More Information
 
 `SweetCookieJar` was designed and implemented by **_Kato Shinya_**.
 
