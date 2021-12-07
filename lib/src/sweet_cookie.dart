@@ -12,7 +12,7 @@ import 'package:sweet_cookie_jar/src/sweet_cookie_rule.dart';
 /// in the existing [Cookie] class. For example, to check if a particular cookie has expired,
 /// it is possible to call [isExpired] or [isNotExpired].
 ///
-/// Also, you can use the [json] method to get a json map of this cookie.
+/// Also, you can use the [toJson] method to get a json map of this cookie.
 extension SweetCookie on Cookie {
   /// Returns this cookie as JSON format.
   ///
@@ -25,7 +25,7 @@ extension SweetCookie on Cookie {
   /// 6. path -> [path]
   /// 7. secure -> [secure]
   /// 8. httpOnly -> [httpOnly]
-  Map<String, dynamic> get json => {
+  Map<String, dynamic> toJson() => {
         'name': name,
         'value': value,
         'expires': expires,

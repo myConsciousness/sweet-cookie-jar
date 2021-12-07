@@ -27,7 +27,7 @@ class DemoSweetCookieJar {
     final cookie = cookieJar.find(name: 'AWSALB');
     print(cookie.name);
     print(cookie.value);
-    print(cookie.json);
+    print(cookie.toJson());
 
     if (cookie.isExpired) {
       // Do something

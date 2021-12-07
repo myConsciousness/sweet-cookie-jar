@@ -43,7 +43,7 @@ import 'package:sweet_cookie_jar/src/sweet_cookie_jar_impl.dart';
 ///   final cookie = cookieJar.find(name: 'AWSALB');
 ///   print(cookie.name);
 ///   print(cookie.value);
-///   print(cookie.json);
+///   print(cookie.toJson());
 ///
 ///   if (cookie.isExpired) {
 ///     // Do something
