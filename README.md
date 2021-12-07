@@ -22,7 +22,7 @@
 `SweetCookieJar` is an open-sourced Dart library.</br>
 With `SweetCookieJar`, you can easily manage cookie on your application.
 
-`SweetCookieJar` is a library that extends the functionality of the official [Cookie](https://api.flutter.dev/flutter/dart-io/Cookie-class.html) class. It also works with [Responses](https://pub.dev/documentation/http/latest/http/Response-class.html) in the HTTP package, and even if multiple `set-cookie` are set in the response header, which is a weak point in the HTTP package, `SweetCookieJar` can manage these cookie information very easily.
+`SweetCookieJar` is a library that extends the functionality of the official [Cookie](https://api.flutter.dev/flutter/dart-io/Cookie-class.html) class. It also works with [Responses](https://pub.dev/documentation/http/latest/http/Response-class.html) in the [http](https://pub.dev/packages/http) package, and even if multiple `set-cookie` are set in the response header, which is a weak point in the [http](https://pub.dev/packages/http) package, `SweetCookieJar` can manage these cookie information very easily!
 
 No more difficult implementation is needed to handle multiple `set-cookie` set in response header in Dart. Just pass the [Responses](https://pub.dev/documentation/http/latest/http/Response-class.html) to the constructor of `SweetCookieJar`!
 
