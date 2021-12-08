@@ -1,5 +1,9 @@
 # Release Note
 
+## 1.0.0
+
+- Just upgrade version to `1.0.0`.
+
 ## 0.0.3
 
 - Fixed minor features.

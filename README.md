@@ -51,6 +51,8 @@ import 'package:sweet_cookie_jar/sweet_cookie_jar.dart';
 ### 1.1.3. Use SweetCookieJar
 
 ```dart
+import 'package:sweet_cookie_jar/sweet_cookie_jar.dart';
+
 void main() {
     // The cookie set in the response header
     // will be extracted by the constructor process.
