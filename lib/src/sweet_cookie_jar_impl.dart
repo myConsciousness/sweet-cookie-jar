@@ -26,11 +26,11 @@ class SweetCookieJarImpl implements SweetCookieJar {
     _rawData = setCookie;
   }
 
-  /// The raw set cookie data
-  late String _rawData;
-
   /// The cookies
   final List<Cookie> _cookies = [];
+
+  /// The raw set cookie data
+  String _rawData = '';
 
   @override
   String get rawData => _rawData;
