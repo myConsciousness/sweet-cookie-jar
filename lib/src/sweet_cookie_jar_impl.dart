@@ -8,7 +8,6 @@ import 'package:universal_io/io.dart';
 
 // Project imports:
 import 'package:sweet_cookie_jar/src/sweet_cookie_jar.dart';
-import 'package:sweet_cookie_jar/src/sweet_cookie_rule.dart';
 
 /// This is an implementation class of [SweetCookieJar].
 class SweetCookieJarImpl implements SweetCookieJar {
@@ -61,10 +60,7 @@ class SweetCookieJarImpl implements SweetCookieJar {
       }
     }
 
-    return Cookie(
-      SweetCookieRule.emptyName,
-      SweetCookieRule.emptyValue,
-    );
+    return Cookie('', '');
   }
 
   @override

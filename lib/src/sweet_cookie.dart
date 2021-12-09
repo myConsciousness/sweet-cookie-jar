@@ -5,9 +5,6 @@
 // Package imports:
 import 'package:universal_io/io.dart';
 
-// Project imports:
-import 'package:sweet_cookie_jar/src/sweet_cookie_rule.dart';
-
 /// This is an extension of the [Cookie] class.
 ///
 /// It provides useful functions for handling cookies that are not defined
@@ -45,8 +42,7 @@ extension SweetCookie on Cookie {
   bool get isNotExpired => !isExpired;
 
   /// Returns true if this cookie is empty, otherwise false.
-  bool get isEmpty =>
-      name == SweetCookieRule.emptyName && value == SweetCookieRule.emptyValue;
+  bool get isEmpty => name.isEmpty;
 
   /// Returns true if this cookie is not empty, otherwise false.
   bool get isNotEmpty => !isEmpty;

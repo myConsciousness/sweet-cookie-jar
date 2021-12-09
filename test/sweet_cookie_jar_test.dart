@@ -67,7 +67,7 @@ void main() {
 
       expect(cookie.isEmpty, true);
       expect(cookie.isNotEmpty, false);
-      expect(cookie.name, '\$EMPTY_SWEET_COOKIE\$');
+      expect(cookie.name, '');
       expect(cookie.value, '');
       expect(cookie.secure, false);
     });
