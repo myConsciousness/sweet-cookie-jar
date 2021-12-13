@@ -2,7 +2,7 @@
 name: I'd like a new feature.
 about:
   You are using `package:sweet_cookie_jar` and would like a new feature to make it
-  easier to use Duolingo API.
+  easier to use SweetCookieJar.
 ---
 
 <!--
