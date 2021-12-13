@@ -3,7 +3,9 @@
 **_A most easily usable cookie management library in Dart!_**
 
 [![pub package](https://img.shields.io/pub/v/sweet_cookie_jar.svg)](https://pub.dev/packages/sweet_cookie_jar)
-[![Dart](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/dart.yml/badge.svg)](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/dart.yml)
+[![codecov](https://codecov.io/gh/myConsciousness/sweet-cookie-jar/branch/main/graph/badge.svg?token=2JMUAZOIGB)](https://codecov.io/gh/myConsciousness/sweet-cookie-jar)
+[![Analyzer](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/analyzer.yml/badge.svg)](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/analyzer.yml)
+[![Test](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/test.yml/badge.svg)](https://github.com/myConsciousness/sweet-cookie-jar/actions/workflows/test.yml)
 
 <!-- TOC -->
 
