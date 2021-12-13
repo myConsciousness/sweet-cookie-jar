@@ -1,5 +1,9 @@
 # Release Note
 
+## 1.0.2
+
+- Improved documents.
+
 ## 1.0.1
 
 - Improved minor features.
