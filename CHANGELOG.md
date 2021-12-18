@@ -1,5 +1,9 @@
 # Release Note
 
+## 1.0.4
+
+- Fixed some documents.
+
 ## 1.0.3
 
 - Supported more multiple platforms.
