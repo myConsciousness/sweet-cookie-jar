@@ -18,7 +18,7 @@ class SweetCookieJarImpl implements SweetCookieJar {
       return;
     }
 
-    for (final cookie in setCookie.split(RegExp(',(?=[^ ])'))) {
+    for (final cookie in setCookie.split(RegExp("""(?<!expires=\w{3}|"|')\s*,\s*(?!"|')"""))) {
       _cookies.add(Cookie.fromSetCookieValue(cookie));
     }
 
