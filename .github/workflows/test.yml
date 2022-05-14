@@ -2,24 +2,26 @@ name: Test
 
 on:
   push:
-    branches: [ main, develop ]
+    # staging and trying branches are for Bors config
+    branches: [ main, staging, trying ]
   pull_request:
-    branches: [ main, develop ]
+    # staging and trying branches are for Bors config
+    branches: [ main, staging, trying ]
+  schedule:
+    - cron: '0 3 * * *'
 
 jobs:
-  flutter_test:
+  test:
+    name: test
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-      - uses: subosito/flutter-action@v1
-        with:
-          channel: 'stable'
-      - run: flutter pub get
-      - run: flutter test --no-test-assets --coverage --coverage-path=~/coverage/lcov.info
-      - uses: codecov/codecov-action@v1
-        with:
-          token: ${{secrets.CODECOV_TOKEN}}
-          file: ~/coverage/lcov.info
+    - uses: actions/checkout@v3
+    - uses: subosito/flutter-action@v2.4.0
+    - name: install dependencies
+      run: flutter pub get
+    - name: run test with coverage
+      run: flutter test --coverage
+    - uses: codecov/codecov-action@v3
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
+        file: ./coverage/lcov.info
