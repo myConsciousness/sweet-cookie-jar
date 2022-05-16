@@ -84,4 +84,7 @@ abstract class SweetCookieJar {
 
   /// Returns true if this cookie jar contains cookie linked to [name], otherwise false.
   bool containsName({required String name});
+
+  /// Combines two [SweetCookieJar].
+  SweetCookieJar operator +(SweetCookieJar cookieJar);
 }
