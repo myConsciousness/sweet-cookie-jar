@@ -28,6 +28,14 @@ void main() {
     });
   });
 
+  group('Test nameSet', () {
+    test('Test nameSet', () {
+      final cookieJar = SweetCookieJar.from(response: _testResponse);
+      expect(cookieJar.nameSet,
+          {"AWSALB", "AWSALBCORS", "jwt_token", "csrf_token", "wuuid"});
+    });
+  });
+
   group('Test find.', () {
     test('Test find AWSALB', () {
       final cookieJar = SweetCookieJar.from(response: _testResponse);
