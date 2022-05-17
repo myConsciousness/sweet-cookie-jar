@@ -42,7 +42,7 @@ class SweetCookieJarImpl implements SweetCookieJar {
   Set<String> get nameSet {
     final names = <String>{};
     for (final cookie in _cookies) {
-      if (names.contains(cookie.name)) {
+      if (!names.contains(cookie.name)) {
         names.add(cookie.name);
       }
     }
