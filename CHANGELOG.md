@@ -1,33 +1,38 @@
 # Release Note
 
-## 1.0.4
+## v1.1.0
+
+- Added `+` operator and you can combine `SweetCookieJar`s. ([#4](https://github.com/myConsciousness/sweet-cookie-jar/pull/4))
+- Fixed regex for splitting cookies. ([#2](https://github.com/myConsciousness/sweet-cookie-jar/pull/2))
+
+## v1.0.4
 
 - Fixed some documents.
 
-## 1.0.3
+## v1.0.3
 
 - Supported more multiple platforms.
 
-## 1.0.2
+## v1.0.2
 
 - Improved documents.
 
-## 1.0.1
+## v1.0.1
 
 - Improved minor features.
 
-## 1.0.0
+## v1.0.0
 
 - Just upgrade version to `1.0.0`.
 
-## 0.0.3
+## v0.0.3
 
 - Fixed minor features.
 
-## 0.0.2
+## v0.0.2
 
 - Fixed so that this library can be used from web applications.
 
-## 0.0.1
+## v0.0.1
 
 - First release!

@@ -18,16 +18,18 @@ class SweetCookieJarImpl implements SweetCookieJar {
       return;
     }
 
-    final cookiesSplit = RegExp(
-      r"""(?<!expires=\w{3}|"|')\s*,\s*(?!"|')""",
-      caseSensitive: false,
-    );
-    for (final cookie in setCookie.split(cookiesSplit)) {
+    for (final cookie in setCookie.split(_regexSplitSetCookies)) {
       _cookies.add(Cookie.fromSetCookieValue(cookie));
     }
 
     _rawData = setCookie;
   }
+
+  /// The regex pattern for splitting the set-cookie header.
+  static final _regexSplitSetCookies = RegExp(
+    r"""(?<!expires=\w{3}|"|')\s*,\s*(?!"|')""",
+    caseSensitive: false,
+  );
 
   /// The cookies
   final List<Cookie> _cookies = [];
@@ -107,12 +109,13 @@ class SweetCookieJarImpl implements SweetCookieJar {
 
   @override
   SweetCookieJar operator +(SweetCookieJar cookieJar) {
-    final _response = Response.bytes(
+    final newResponse = Response.bytes(
       [],
       200,
       headers: {'set-cookie': "$rawData,${cookieJar.rawData}"},
     );
-    return SweetCookieJarImpl.from(response: _response);
+
+    return SweetCookieJarImpl.from(response: newResponse);
   }
 
   String _getSetCookie({required Response response}) {
