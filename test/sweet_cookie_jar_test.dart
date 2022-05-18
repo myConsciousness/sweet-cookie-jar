@@ -19,6 +19,24 @@ final _testResponse = Response.bytes(
   },
 );
 
+final _partTestResponse1 = Response.bytes(
+  [],
+  200,
+  headers: {
+    'set-cookie':
+        'AWSALB=CGSOoaFEi91n9xSfeeSxoUvs0A/TTQn9/Mbxe8dtkv50cBqJmHTwPw3; Expires=Tue, 14 Dec 2021 02:20:37 GMT; Path=/,AWSALBCORS=OHhxYMU0mU7WOoh+4RH5bxe8d6AytmnHaZNGUBqJmHTwPw3; Expires=Tue, 14 Dec 2021 02:20:37 GMT; Path=/; SameSite=None; Secure,jwt_token=test; Domain=.test; Max-Age=31536000; Path=/; expires=Wed, 07-Dec-2022 02:20:37 GMT; SameSite=lax; Secure'
+  },
+);
+
+final _partTestResponse2 = Response.bytes(
+  [],
+  200,
+  headers: {
+    'set-cookie':
+        'csrf_token=test==; Domain=.test; Max-Age=31536000; Path=/; expires=Wed, 07-Dec-2022 02:20:37 GMT,csrf_token=test==; Domain=.test; Max-Age=31536000; Path=/; expires=Wed, 07-Dec-2022 02:20:37 GMT,wuuid=77be8f46-4'
+  },
+);
+
 void main() {
   group('Test constructor.', () {
     test('Test constructor.', () {
@@ -32,6 +50,17 @@ void main() {
     test('Test nameSet', () {
       final cookieJar = SweetCookieJar.from(response: _testResponse);
       expect(cookieJar.nameSet,
+          {"AWSALB", "AWSALBCORS", "jwt_token", "csrf_token", "wuuid"});
+    });
+  });
+
+  group('Test operator +.', () {
+    test('Test operator +.', () {
+      final cookieJar1 = SweetCookieJar.from(response: _partTestResponse1);
+      final cookieJar2 = SweetCookieJar.from(response: _partTestResponse2);
+      final cookieJar3 = cookieJar1 + cookieJar2;
+
+      expect(cookieJar3.nameSet,
           {"AWSALB", "AWSALBCORS", "jwt_token", "csrf_token", "wuuid"});
     });
   });

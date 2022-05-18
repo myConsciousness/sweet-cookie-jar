@@ -105,6 +105,16 @@ class SweetCookieJarImpl implements SweetCookieJar {
     return false;
   }
 
+  @override
+  SweetCookieJar operator +(SweetCookieJar cookieJar) {
+    final _response = Response.bytes(
+      [],
+      200,
+      headers: {'set-cookie': "$rawData,${cookieJar.rawData}"},
+    );
+    return SweetCookieJarImpl.from(response: _response);
+  }
+
   String _getSetCookie({required Response response}) {
     final headers = response.headers;
 
