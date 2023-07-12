@@ -1,5 +1,9 @@
 # Release Note
 
+## v1.1.1
+- Upgrade minimum required Dart SDK version to 3.0.0
+- http package upgraded to 1.0.0
+
 ## v1.1.0
 
 - Added `+` operator and you can combine `SweetCookieJar`s. ([#4](https://github.com/myConsciousness/sweet-cookie-jar/pull/4))
