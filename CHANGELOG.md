@@ -1,5 +1,10 @@
 # Release Note
 
+## v1.2.0
+
+- Bump SDK constraint to `^3.5.0`.
+- Bump dependencies.
+
 ## v1.1.0
 
 - Added `+` operator and you can combine `SweetCookieJar`s. ([#4](https://github.com/myConsciousness/sweet-cookie-jar/pull/4))
